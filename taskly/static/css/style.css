@@ -1,0 +1,27 @@
+        
+        body {
+            background-color: lightblue;
+        }
+        
+        
+        h1 {
+            text-align: center;
+        }
+        
+        span {
+            color: red;
+        }
+
+        .jumbotron {
+
+            background-color: rgba(144, 238, 144, 0.315);
+
+        }
+
+        .twitter-tweet {
+            text-align: center;
+        }
+
+        div a {
+            text-align: center;
+        }

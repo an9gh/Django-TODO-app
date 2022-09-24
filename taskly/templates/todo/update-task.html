@@ -1,0 +1,41 @@
+{% include 'todo/base.html' %}
+{%load crispy_forms_tags %}
+
+{% block body %}
+<style>
+    h2 {
+        text-align: center;
+    }
+</style>
+
+
+<h2>Update a task!</h2>
+
+
+<div class="container">
+    <div class="jumbotron">
+
+        <form method="post" autocomplete="off">
+            {% csrf_token %}
+            
+            
+            {{ form|crispy }}
+            
+            
+            <input type="submit" value="Submit">
+            
+            
+            
+            
+            
+            
+            </form>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

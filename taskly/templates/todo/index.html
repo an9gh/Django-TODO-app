@@ -1,0 +1,68 @@
+{% load static %}
+{% include 'todo/base.html' %}
+<html>
+
+<head>
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+
+
+</head>
+
+{% if messages %}
+<div class="container">
+     
+    <div class="alert alert-primary" role="alert">
+        
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        
+    </div>
+</div>
+{% endif %}
+
+<div class="container">
+
+
+    <div class="jumbotron">
+        <h1>Welcome <span>To</span> TODO APP</h1>
+        <img src="https://lukaszadam.com/monitor.svg" class="img-fluid" style="width: 100%; height:250px;"
+            alt="Responsive image">
+
+            
+            
+            <h2>About</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam itaque nesciunt expedita consequuntur
+                praesentium
+                cupiditate optio. Ex ratione repellat placeat odio at. Temporibus iure, corporis numquam sequi modi earum
+                tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime praesentium nihil, eveniet iure
+                vitae
+                molestiae dolores? Perferendis voluptate, harum quibusdam ducimus similique, placeat, inventore voluptas aut
+                quo
+                pariatur adipisci iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci beatae ex
+                doloremque
+                omnis, exercitationem reiciendis quod placeat voluptates, dignissimos, sed quas quos ad. Sit nostrum dicta
+                porro
+                voluptatem labore dignissimos.</p>
+                <a href="{% url 'create-task' %}"><button class="btn btn-info btn-sm">Create Task</button> </a>
+    
+                <a href="{% url 'view_tasks' %}"><button class="btn btn-success btn-sm">View Task</button> </a>
+
+
+
+       
+
+    </div>
+</div>
+
+
+<script src="{% static 'js\index.js' %}"></script>
+
+
+
+
+</html>
